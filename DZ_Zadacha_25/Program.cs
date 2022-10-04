@@ -6,15 +6,19 @@
 2, 4 -> 16
 */
 
-Console.WriteLine("Введи первое число А: "); //Ввожу число А и считываю его.
+
+Console.WriteLine("Введи первое число А: ");
 int A = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine("Введи второе число В: "); //Ввожу число В и считываю его.
+Console.WriteLine("Введи второе число В: ");
 int B = int.Parse(Console.ReadLine()!);
 
-/* Объявляю переменную result, затем добавляю условие, при котором любое число становится целым.
-Затем ввожу метод вычисления степени с помощью Math.Pow. */
-int result = Convert.ToInt32(Math.Pow(A, B)); 
+int value = A;
 
-Console.WriteLine($"Натуральная степень числа А из числа В = {result}"); //Вывожу результат.
+for (int i = 0; i <= B; i++)
+{
+    value = Convert.ToInt32(Math.Pow(A, B));
+}
+
+Console.WriteLine($"Натуральная степень числа А из числа В = {value}");
 
